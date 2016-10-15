@@ -128,7 +128,7 @@ public class Assignment3BinarySearch {
 		    // to show them that their number was inputed in the correct place
 		    System.out.println("The new list is now: ");
 		
-            for (int counter = 0; counter < numbers.size(); counter++) {
+                    for (int counter = 0; counter < numbers.size(); counter++) {
 			
 			    System.out.println(numbers.get(counter));
 			
