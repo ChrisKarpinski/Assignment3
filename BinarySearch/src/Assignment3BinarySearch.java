@@ -177,16 +177,16 @@ public class Assignment3BinarySearch {
 				
 		if (listToSort.get(iterator2) < min) {
 		
-			min = listToSort.get(iterator2);
+		    min = listToSort.get(iterator2);
                     
 		}
 				
 	    }
 			
-		// takes off the minimum from the current range in the list and 
-		// puts it at the end of the list to build the sorted list
-		listToSort.remove(listToSort.indexOf(min));
-		listToSort.add(min);
+	    // takes off the minimum from the current range in the list and 
+	    // puts it at the end of the list to build the sorted list
+	    listToSort.remove(listToSort.indexOf(min));
+	    listToSort.add(min);
 			
 	}
         
