@@ -60,101 +60,101 @@ public class Assignment3BinarySearch {
 			// integer input to be searched for in the sorted list
 			// This way of validating user input was retrieved from: 
 			// https://www.youtube.com/watch?v=PWez5mVXACc
-		do {
+		    do {
 			
-			System.out.println("Enter an integer to be searched for in the "
-					+ "list: ");
+			    System.out.println("Enter an integer to be searched for in "
+					+ "the list: ");
 			
-			if (read.hasNextInt()) {
-				keySearch = read.nextInt();
-				validInput = true;
-			}
-			else {
+			    if (read.hasNextInt()) {
+				    keySearch = read.nextInt();
+				    validInput = true;
+			    }
+			    else {
 				
-				System.err.println("Invalid input - not integer");
-				validInput = false;
-				read.next();
-			}
+				    System.err.println("Invalid input - not integer");
+				    validInput = false;
+				    read.next();
+			    }
 			
-		} while (!validInput);
+		    } while (!validInput);
 		
-		// if the binary search function returns a -1, that means the
-		// entered number could not be found
-		if (binarySearch(numbers, keySearch) == -1) {
+		    // if the binary search function returns a -1, that means the
+		    // entered number could not be found
+		    if (binarySearch(numbers, keySearch) == -1) {
 			
-			System.out.println("The value you have entered could not be "
+			    System.out.println("The value you have entered could not be "
 					+ "found");
 			
-		}
+		    }
 		
-		// outputs the position of the entered key in the sorted list
-		else {
+		    // outputs the position of the entered key in the sorted list
+		    else {
 			
-		    System.out.println("The first occurance of the value is at "
+		        System.out.println("The first occurance of the value is at "
 		    		+ "position: " + binarySearch(numbers, keySearch));
 		
-		}
+		    }
         
 		
-		// the while loop below once again verifies that the user enters a 
-		// valid input for the number they want to input - 
-		// it must be an integer
-		do {
+		    // the while loop below once again verifies that the user enters a 
+		    // valid input for the number they want to input - 
+		    // it must be an integer
+		    do {
 			
-			System.out.println("Add another integer to the list: ");
+			    System.out.println("Add another integer to the list: ");
 			
-			if (read.hasNextInt()) {
+			    if (read.hasNextInt()) {
 				
-			    nextNumberAdded = read.nextInt();
-			    validInput = true;
+			        nextNumberAdded = read.nextInt();
+			        validInput = true;
 			    
-			}
+			    }
 
-			else {
+			    else {
 				
-				System.err.println("Invalid input - not integer");
-				validInput = false;
-				read.next();
+				    System.err.println("Invalid input - not integer");
+				    validInput = false;
+				    read.next();
 				
-			}
+			    }
 			
-		} while (!validInput);
+		    } while (!validInput);
 		
-		// calls the function that inserts a new number into the list in the 
-		// correct position
-		numbers = enterNewNumber(numbers, nextNumberAdded);
+		    // calls the function that inserts a new number into the list in  
+		    // the correct position
+		    numbers = enterNewNumber(numbers, nextNumberAdded);
 		
-		// prints out the new sorted list with the user's inputed number
-		// to show them that their number was inputed in the correct place
-		System.out.println("The new list is now: ");
+		    // prints out the new sorted list with the user's inputed number
+		    // to show them that their number was inputed in the correct place
+		    System.out.println("The new list is now: ");
 		
-        for (int counter = 0; counter < numbers.size(); counter++) {
+            for (int counter = 0; counter < numbers.size(); counter++) {
 			
-			System.out.println(numbers.get(counter));
+			    System.out.println(numbers.get(counter));
 			
-		}
+		    }
         
-        // asks the user if they would like to continue with the program
-        System.out.println("Would you like to continue?");
-        wantCont = read.next();
-        
-        // makes sure they enter in valid input for continuation
-        while (!(wantCont.equals("Y") || wantCont.equals("N"))) {
-        	
-        	System.err.println("Invalid input");
-        	System.out.println("Would you like to continue?");
+            // asks the user if they would like to continue with the program
+            System.out.println("Would you like to continue?");
             wantCont = read.next();
+        
+            // makes sure they enter in valid input for continuation
+            while (!(wantCont.equals("Y") || wantCont.equals("N"))) {
         	
-        }
+        	    System.err.println("Invalid input");
+        	    System.out.println("Would you like to continue?");
+                wantCont = read.next();
+        	
+            }
         
         
-        // closes the program if the user does not wish to continue
-        if (wantCont.equals("N")) {
+            // closes the program if the user does not wish to continue
+            if (wantCont.equals("N")) {
         	
-        	System.out.println("");
-        	System.out.println("Done");
+        	    System.out.println("");
+        	    System.out.println("Done");
         	
-        }
+            }
         
 		}
 		
@@ -176,8 +176,9 @@ public class Assignment3BinarySearch {
 				// based on how many elements have been sorted thus far
 				
 				if (listToSort.get(iterator2) < min) {
-					
+		
 					min = listToSort.get(iterator2);
+                    
 				}
 				
 			}
@@ -205,24 +206,23 @@ public class Assignment3BinarySearch {
 		
 		while (higherBound >= lowerBound) {
 			
-		middleValuePos = (int) ((lowerBound + higherBound)/2);
+		    middleValuePos = (int) ((lowerBound + higherBound)/2);
 		
-		if (numbersList.get(middleValuePos) < key) {
+		    if (numbersList.get(middleValuePos) < key) {
 			
-			lowerBound = middleValuePos + 1; 
+			    lowerBound = middleValuePos + 1; 
 			
-		}
-		else if (numbersList.get(middleValuePos) > key) {
+		    }
+		    else if (numbersList.get(middleValuePos) > key) {
 			
-			higherBound = middleValuePos - 1;
+			    higherBound = middleValuePos - 1;
 			
-		}
+		    }
 		
-		else {
-			// return the position if found
-		    return middleValuePos;
-		
-		}
+		    else {
+			    // return the position if found
+		        return middleValuePos;
+		    }
 		
 		}
 		// return -1 (not found) if the given key is not found
