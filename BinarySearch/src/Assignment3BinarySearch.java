@@ -38,7 +38,7 @@ public class Assignment3BinarySearch {
 		}
 		
 		// Adds a line to clearly separate the unsorted list from 
-		// the sorted one.
+		// the sorted one. 
 		System.out.println("*************************************************"
 				+ "******************");
 		
