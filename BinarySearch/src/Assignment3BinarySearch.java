@@ -50,7 +50,7 @@ public class Assignment3BinarySearch {
 		
 	for (int counter = 0; counter < numbers.size(); counter++) {
 			
-		System.out.println(numbers.get(counter));
+	    System.out.println(numbers.get(counter));
 			
 	}
 		
@@ -66,14 +66,14 @@ public class Assignment3BinarySearch {
 			+ "the list: ");
 			
 		if (read.hasNextInt()) {
-			keySearch = read.nextInt();
-			validInput = true;
+		    keySearch = read.nextInt();
+		    validInput = true;
 		}
 		else {
 				
-			System.err.println("Invalid input - not integer");
-			validInput = false;
-			read.next();
+		    System.err.println("Invalid input - not integer");
+		    validInput = false;
+		    read.next();
 		}
 			
 	    } while (!validInput);
@@ -105,16 +105,16 @@ public class Assignment3BinarySearch {
 			
 		if (read.hasNextInt()) {
 				
-			nextNumberAdded = read.nextInt();
-			validInput = true;
+		    nextNumberAdded = read.nextInt();
+		    validInput = true;
 			    
 		}
 
 		else {
 				
-			System.err.println("Invalid input - not integer");
-			validInput = false;
-			read.next();
+		    System.err.println("Invalid input - not integer");
+		    validInput = false;
+		    read.next();
 				
 		}
 			
@@ -156,9 +156,9 @@ public class Assignment3BinarySearch {
         	
             }
         
-		}
-		
 	}
+		
+    }
 	
     public static List<Integer> sort (List<Integer> listToSort) {
 	// sort function that sorts an entered list
