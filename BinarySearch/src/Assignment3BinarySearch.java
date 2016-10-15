@@ -96,8 +96,8 @@ public class Assignment3BinarySearch {
 	    }
         
 		
-	    // the while loop below once again verifies that the user enters a 
-	    // valid input for the number they want to input - 
+	    // the while loop below once again verifies that the user enters  
+	    // a valid input for the number they want to input - 
 	    // it must be an integer
 	    do {
 			
