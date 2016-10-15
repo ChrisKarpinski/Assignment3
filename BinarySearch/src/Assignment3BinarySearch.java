@@ -135,14 +135,14 @@ public class Assignment3BinarySearch {
 	    }
         
             // asks the user if they would like to continue with the program
-            System.out.println("Would you like to continue?");
+            System.out.println("Would you like to continue? (Enter Y or N)");
             wantCont = read.next();
         
             // makes sure they enter in valid input for continuation
             while (!(wantCont.equals("Y") || wantCont.equals("N"))) {
         	
                 System.err.println("Invalid input");
-        	System.out.println("Would you like to continue?");
+        	System.out.println("Would you like to continue? (Enter Y or N)");
                 wantCont = read.next();
         	
             }
