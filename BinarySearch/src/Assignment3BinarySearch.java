@@ -30,7 +30,7 @@ public class Assignment3BinarySearch {
 	// 1 and 1000.
 	System.out.println("The original list of numbers is: ");
 		
-	for (int counter = 0;counter < 250;counter++) {
+	for (int counter = 0;counter < numbers.size();counter++) {
 			
 	    numbers.add(rand.nextInt(1000-1) + 1);
 	    System.out.println(numbers.get(counter));
